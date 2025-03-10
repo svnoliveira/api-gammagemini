@@ -4,7 +4,7 @@ from rest_framework.generics import (
     RetrieveUpdateDestroyAPIView,
 )
 from _core.permissions import (
-    IsSuperUserOrNotSafeMethod,
+    IsSuperUserOrSafeMethod,
     IsSuperUserOrOwnsAccount
 )
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -14,7 +14,7 @@ from .models import User
 
 class UserListCreateView(ListCreateAPIView):
     authentication_classes = [JWTAuthentication]
-    permission_classes = [IsSuperUserOrNotSafeMethod]
+    permission_classes = [IsSuperUserOrSafeMethod]
 
     serializer_class = UserSerializer
     queryset = User.objects.all()
