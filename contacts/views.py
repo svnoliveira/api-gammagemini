@@ -10,7 +10,6 @@ from .serializers import ContactSerializer
 
 class ContactListCreateView(ListCreateAPIView):
     authentication_classes = [JWTAuthentication]
-    permission_classes = [IsSuperUserOrSafeMethod]
 
     serializer_class = ContactSerializer
     queryset = Contact.objects.all()
