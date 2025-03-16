@@ -188,3 +188,10 @@ CORS_ALLOWED_ORIGINS = [
     'http://gammagemini.com',
     'http://api.gammagemini.com',
 ]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    'Authorization',
+    'Content-Type',
+]
