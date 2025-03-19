@@ -34,7 +34,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ip-50-116-31-203.cloudezapp.io', 'gammagemini', 'cloudezapp', 'api.gammagemini']
+ALLOWED_HOSTS = ["api.gammagemini.com", "gammagemini.com", "127.0.0.1", "localhost"]
 RENDER_EXTERNAL_HOSTNAME = os.getenv("RENDER_EXTERNAL_HOSTNAME")
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS += [RENDER_EXTERNAL_HOSTNAME, "0.0.0.0"]
