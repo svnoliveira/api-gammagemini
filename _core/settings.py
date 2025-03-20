@@ -195,3 +195,12 @@ CORS_ALLOW_HEADERS = [
     'Authorization',
     'Content-Type',
 ]
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'OPTIONS',
+    'PUT',
+    'PATCH',
+    'DELETE',
+]
